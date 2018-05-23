@@ -1,11 +1,6 @@
 ---
 title: Promise.coroutine
-tags: |-
-
-  - code
-  - node.js
-  - coroutine
-  - async
+tags: [code, node, async, coroutine]
 permalink: promise-coroutine
 id: 21
 updated: '2017-07-19 02:45:11'

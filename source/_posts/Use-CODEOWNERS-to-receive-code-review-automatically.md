@@ -1,9 +1,6 @@
 ---
 title: Use CODEOWNERS to receive code review automatically
-tags: |-
-
-  - code
-  - github
+tags: [code, github]
 permalink: use-codeowners-to-receive-code-review-automatically
 id: 18
 updated: '2017-07-13 03:07:45'

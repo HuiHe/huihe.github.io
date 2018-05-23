@@ -1,8 +1,6 @@
 ---
 title: Jump into the jungle
-tags: |-
-
-  - web
+tags: blog
 permalink: jump-into-the-jungle
 id: 10
 updated: '2016-12-15 23:11:42'

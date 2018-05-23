@@ -1,8 +1,6 @@
 ---
 title: Use lodash to simplify your javascript code
-tags: |-
-
-  - code
+tags: [code, js]
 permalink: use-lodash-to-simplify-your-javascript-code
 id: 6
 updated: '2016-11-22 09:28:59'

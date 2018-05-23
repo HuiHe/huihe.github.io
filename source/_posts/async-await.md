@@ -1,8 +1,6 @@
 ---
 title: async await
-tags: |-
-
-  - code
+tags: [code, async]
 permalink: async-await
 id: 3
 updated: '2016-11-12 13:14:19'

@@ -1,8 +1,6 @@
 ---
 title: xcrun error invalid active developer path after upgrading to mac os sierra
-tags: |-
-
-  - mac
+tags: mac
 permalink: xcrun-error-invalid-active-developer-path-after-upgrading-to-mac-os-sierra
 id: 12
 updated: '2017-01-09 05:52:25'

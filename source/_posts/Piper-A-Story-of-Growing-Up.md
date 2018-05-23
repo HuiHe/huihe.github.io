@@ -1,8 +1,6 @@
 ---
 title: Piper - A Story of Growing Up
-tags: |-
-
-  - music
+tags: music
 permalink: piper
 id: 13
 updated: '2017-01-30 05:44:19'

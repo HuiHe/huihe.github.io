@@ -1,9 +1,6 @@
 ---
 title: 'Issue in npm v5.4.0 which doesn''t work with flow check - Error: spawn EACCES'
-tags: |-
-
-  - code
-  - npm
+tags: [code, npm]
 permalink: issue-in-npm-v5-4-0-which-doesnt-work-with-flow-check-error-spawn-eacces
 id: 22
 updated: '2017-09-04 12:25:06'

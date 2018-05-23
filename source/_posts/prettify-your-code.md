@@ -1,9 +1,7 @@
 ---
 title: Use prettier to format your code, automatically, for all your team
 date: 2018-05-22 22:19:33
-tags: |-
-
-  - code
+tags: code
 ---
 
 As a developer, I highly recommend to use [prettier](https://prettier.io/) in your editor. And today I'd like to go a step further, force and automate code formatting for all your team. No need to discuss the code style any more, don't waste time on the arguments about space or tab, whether or not add a new line. And it's much neat for code diff and review.

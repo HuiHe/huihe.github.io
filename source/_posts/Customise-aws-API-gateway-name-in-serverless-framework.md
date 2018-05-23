@@ -1,9 +1,6 @@
 ---
 title: Customise aws API gateway name in serverless framework
-tags: |-
-
-  - code
-  - aws
+tags: [code, aws]
 permalink: customize-aws-api-gateway-name-in-serverless-framework
 id: 14
 updated: '2017-03-08 11:32:06'

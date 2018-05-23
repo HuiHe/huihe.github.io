@@ -1,8 +1,6 @@
 ---
 title: Post from mobile
-tags: |-
-
-  - code
+tags: code
 permalink: post-from-mobile
 id: 5
 updated: '2016-12-16 11:50:08'

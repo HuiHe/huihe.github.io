@@ -1,9 +1,6 @@
 ---
 title: How to use custom authorizer for aws api gateway
-tags: |-
-
-  - code
-  - aws
+tags: [code, aws]
 permalink: aws-api-gateway-custom-authorizer
 id: 7
 updated: '2016-12-08 23:52:21'

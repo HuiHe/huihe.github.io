@@ -1,10 +1,6 @@
 ---
 title: 'In mocha, how to make async setup complete before test run?'
-tags: |-
-
-  - js
-  - mocha
-  - code
+tags: [code, mocha, js, async]
 permalink: in-mocha-how-to-make-async-request-complete-before-test-run
 id: 11
 updated: '2016-12-22 23:39:23'

@@ -1,8 +1,6 @@
 ---
 title: One of my faves
-tags: |-
-
-  - music
+tags: music
 permalink: one-of-my-faves
 id: 16
 updated: '2017-03-11 07:49:25'
