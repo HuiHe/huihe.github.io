@@ -83,5 +83,5 @@ deploy:
   branch: master
   name: Hui He
   email: hehuic@gmail.com
-  message: draw cloud architecture
+  message: aws lambda runtime node.js 8.10
 
