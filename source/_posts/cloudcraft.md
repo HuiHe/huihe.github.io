@@ -1,7 +1,7 @@
 ---
 title: A good online tool to draw your cloud architecture
 date: 2018-08-17 14:45:48
-tags:
+tags: tool
 ---
 
 https://cloudcraft.co/

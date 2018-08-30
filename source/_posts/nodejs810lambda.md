@@ -1,10 +1,12 @@
 ---
-title: Node.js 8.10 available in AWS lambda
+title: Use async or Promise in AWS lambda handler
 date: 2018-08-17 14:56:41
 tags: [node, js, lambda]
 ---
 
-In AWS lambda, using node.js before runtime 8.10, although you can use promise across all your code, but in top handler, you must follow this `callback` pattern. async/await is not supported in handler, even in other functions you must use something like babel to transform your code before deploy.
+In AWS lambda, before node.js runtime 8.10, although you can use promise across all your code, but in top handler, you must follow the below `callback` pattern. async/await is not supported in handler, even in other functions you must use something like babel to transform your code before deploy.
+
+### Previous callback pattern
 
 ```js
 const api = require('something');
@@ -25,8 +27,19 @@ exports.handler = (event, context, callback) => {
 
 With the new Node.js 8.10, you can use promise or async/await pattern in handler, just like normal node.js function. And you don't need to pass context and callback parameters, only event.
 
-- async/await
+## Use async/await
 
+#### for sync value without await:
+```js
+exports.handler = async (event) => {
+  return {
+    statusCode: 200,
+    body: 'ok'
+  }
+}
+```
+
+#### for async value with await:
 ```js
 const api = require('something');
 
@@ -39,33 +52,9 @@ exports.handler = async (event) => {
 };
 ```
 
-- promise
+## Use Promise
 
-```js
-const api = require('something');
-
-exports.handler = (event) => {
-  return new Promise((resolve, reject) => {
-    api.getSomthing(event)
-    .then((data) => {
-        resolve data;
-    })
-    .catch(reject);
-  });
-};
-```
-
-or
-
-```js
-exports.handler = (event) => {
-  return Promise.resolve(event)
-    .then(api.getSomthing);
-};
-```
-
-- for sync value, you need to wrap it in promise:
-
+#### for sync value wrap in Promise:
 ```js
 exports.handler = (event) => {
   return Promise.resolve({
@@ -74,6 +63,29 @@ exports.handler = (event) => {
   })
 };
 ```
+
+#### for async:
+
+you can directly return it, but I don't recommend this way
+```js
+const api = require('something');
+
+exports.handler = (event) => {
+  return api.getSomthing(event);
+};
+```
+
+It's better start from Promise.resolve():
+```js
+exports.handler = (event) => {
+  return Promise.resolve(event)
+    .then(api.getSomthing);
+};
+```
+
+### Summary
+
+To use async or Promise, it's up to your choice. But I'm sure either way is easier than the previous callback pattern. Also to mention again, async/await is actually a syntactic sugar for promise in js.
 
 Ref:
 https://aws.amazon.com/blogs/compute/node-js-8-10-runtime-now-available-in-aws-lambda/
