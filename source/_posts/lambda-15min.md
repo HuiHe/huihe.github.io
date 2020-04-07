@@ -9,4 +9,3 @@ https://aws.amazon.com/about-aws/whats-new/2018/10/aws-lambda-supports-functions
 
 
 > Just because you can doesn't mean you should :)
-
