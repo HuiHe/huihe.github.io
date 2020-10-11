@@ -4,8 +4,6 @@ This is my personal blog using hexo hosted on github. [It was migrated from Ghos
 
 ## How to write
 
-https://hexo.io/docs/writing
-
 ```
 $ yarn hexo new [layout] <title>
 ```
@@ -15,12 +13,10 @@ post is the default layout, but you can supply your own. You can change the defa
 ## Generate local static files
 
 ```
-$ yarn generate
+$ yarn build
 ```
 
 ## How to deploy
-
-https://hexo.io/docs/deployment
 
 ```
 $ yarn deploy
