@@ -1,7 +1,7 @@
 ---
 title: memory leak in node v12
 date: 2020-10-11 14:57:04
-tags:
+tags: node
 ---
 
 Found memory leak in node v12.14(not only this version), issues have already been fixed in v12.18.2.
