@@ -1,12 +1,13 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
+  "name": "My Blog",
+  "version": "0.0.1",
   "private": true,
   "hexo": {
-    "version": "3.7.1"
+    "version": "5.2.0"
   },
   "scripts": {
-    "deploy": "hexo generate --deploy"
+    "deploy": "hexo generate --deploy",
+    "generate": "hexo generate"
   },
   "dependencies": {
     "hexo": "^5.2.0",
