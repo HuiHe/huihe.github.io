@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Starry Starry Night
+title: Twinkle Little Stars
 subtitle: A developer's blog
 description:
 keywords: blog programming developer
@@ -29,9 +29,9 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :title.md # File name of new posts
+new_post_name: :year-:month-:day-:title.md # File name of new posts
 default_layout: post
-titlecase: false # Transform title into titlecase
+titlecase: true # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
@@ -75,6 +75,11 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: landscape
 
+post_asset_folder: true
+marked:
+  prependRoot: true
+  postAsset: true
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
@@ -83,5 +88,5 @@ deploy:
   branch: master
   name: Hui He
   email: hehuic@gmail.com
-  message: change blog title to starry night
+  message: change blog title back
 
