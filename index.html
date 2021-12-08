@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-119591276-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <title>Twinkle Little Stars</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Twinkle Little Stars">
+<meta property="og:url" content="https://huihe.github.io/index.html">
+<meta property="og:site_name" content="Twinkle Little Stars">
+<meta property="og:locale">
+<meta property="article:author" content="Hui He">
+<meta property="article:tag" content="blog programming developer">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Twinkle Little Stars" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Twinkle Little Stars</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://huihe.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-dalabengba" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/11/dalabengba/" class="article-date">
+  <time datetime="2020-10-11T12:04:32.000Z" itemprop="datePublished">2020-10-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/11/dalabengba/">Dalabengba</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>“达啦崩吧” - 神曲！</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XHedu3KcPP0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huihe.github.io/2020/10/11/dalabengba/" data-id="ckwxawtda0004u5lb3ct67ine" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/music/" rel="tag">music</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-memory-leak-in-node-v12" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/11/memory-leak-in-node-v12/" class="article-date">
+  <time datetime="2020-10-11T03:57:04.000Z" itemprop="datePublished">2020-10-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/11/memory-leak-in-node-v12/">Memory Leak in Node V12</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Found memory leak in node v12.14(not only this version), issues have already been fixed in v12.18.2.</p>
+<p>Release notes: 2020-06-30, Version 12.18.2</p>
+<ul>
+<li>deps: V8: backport fb26d0bb1835 (Matheus Marchini) #33573<ul>
+<li>Fixes memory leak in PrototypeUsers::Add</li>
+</ul>
+</li>
+<li>src: use symbol to store AsyncWrap resource (Anna Henningsen) #31745<ul>
+<li>Fixes reported memory leak in #33468</li>
+</ul>
+</li>
+</ul>
+<p>I reproduced this issue locally and here is the heap usage comparison for same code using different node versions.</p>
+<p><img src="/images/node-memory-leak.png"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huihe.github.io/2020/10/11/memory-leak-in-node-v12/" data-id="ckwxawtd50001u5lb2lw36vnm" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/" rel="tag">node</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-lambda-15min" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/12/lambda-15min/" class="article-date">
+  <time datetime="2018-10-11T22:33:36.000Z" itemprop="datePublished">2018-10-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/12/lambda-15min/">Lambda-15min</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>AWS Lambda enables functions that can run up to 15 minutes. This feature is available in all Lambda regions.</p>
+<p><a target="_blank" rel="noopener" href="https://aws.amazon.com/about-aws/whats-new/2018/10/aws-lambda-supports-functions-that-can-run-up-to-15-minutes/">https://aws.amazon.com/about-aws/whats-new/2018/10/aws-lambda-supports-functions-that-can-run-up-to-15-minutes/</a></p>
+<blockquote>
+<p>Just because you can doesn’t mean you should :)</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huihe.github.io/2018/10/12/lambda-15min/" data-id="ckwxawtdk000hu5lb5viw72s2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lambda/" rel="tag">lambda</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-assume-role" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/09/18/assume-role/" class="article-date">
+  <time datetime="2018-09-18T04:54:50.000Z" itemprop="datePublished">2018-09-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/18/assume-role/">Aws Sts Assume-Role</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><code>aws sts assume-role</code> is very useful for cross-account access. Imaging using dev account for build and testing and assume to prod account for deployment.</p>
+<p>To assume a role, your AWS account must be trusted by the role. The trust relationship is defined in the role’s trust policy when the role is created. That trust policy states which accounts are allowed to delegate access to this account’s role.</p>
+<p>By default, the temporary security credentials created by AssumeRole last for one hour. However, you can use the optional DurationSeconds parameter to specify the duration of your session. You can provide a value from 900 seconds (15 minutes) up to the maximum session duration setting for the role. This setting can have a value from 1 hour to 12 hours.</p>
+<p>To assume a role:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aws sts assume-role --role-arn arn:aws:iam::123456789012:role/xaccounts3access --role-session-name s3-access-example</span><br></pre></td></tr></table></figure>
+<p>The output of the command contains an access key, secret key, and session token that you can use to authenticate to AWS:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;AssumedRoleUser&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;AssumedRoleId&quot;</span>: <span class="string">&quot;AROA3XFRBF535PLBIFPI4:s3-access-example&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;Arn&quot;</span>: <span class="string">&quot;arn:aws:sts::123456789012:assumed-role/xaccounts3access/s3-access-example&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;Credentials&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;SecretAccessKey&quot;</span>: <span class="string">&quot;9drTJvcXLB89EXAMPLELB8923FB892xMFI&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;SessionToken&quot;</span>: <span class="string">&quot;AQoXdzELDDY//////////wEaoAK1wvxJY12r2IrDFT2IvAzTCn3zHoZ7YNtpiQLF0MqZye/qwjzP2iEXAMPLEbw/m3hsj8VBTkPORGvr9jM5sgP+w9IZWZnU+LWhmg+a5fDi2oTGUYcdg9uexQ4mtCHIHfi4citgqZTgco40Yqr4lIlo4V2b2Dyauk0eYFNebHtYlFVgAUj+7Indz3LU0aTWk1WKIjHmmMCIoTkyYp/k7kUG7moeEYKSitwQIi6Gjn+nyzM+PtoA3685ixzv0R7i5rjQi0YE0lf1oeie3bDiNHncmzosRM6SFiPzSvp6h/32xQuZsjcypmwsPSDtTPYcs0+YN/8BRi2/IcrxSpnWEXAMPLEXSDFTAQAM6Dl9zR0tXoybnlrZIwMLlMi1Kcgo5OytwU=&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;Expiration&quot;</span>: <span class="string">&quot;2016-03-15T00:05:07Z&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;AccessKeyId&quot;</span>: <span class="string">&quot;ASIAJEXAMPLEXEG2JICEA&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Used in build bash scripts:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">assume_role</span></span>() &#123;</span><br><span class="line">  <span class="built_in">local</span> creds</span><br><span class="line">  $(aws sts assume-role --role-arn <span class="string">&quot;<span class="variable">$1</span>&quot;</span> --role-session-name your-session-name --output text --query <span class="string">&#x27;Credentials | join(``, [`&quot;export AWS_ACCESS_KEY_ID=&quot;`,AccessKeyId,`&quot; AWS_SECRET_ACCESS_KEY=&quot;`,SecretAccessKey,`&quot; AWS_SESSION_TOKEN=&quot;`,SessionToken,`\n`])&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -n <span class="string">&quot;<span class="variable">$&#123;ASSUME_ROLE:-&#125;</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">  assume_role <span class="string">&quot;<span class="variable">$ASSUME_ROLE</span>&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://docs.aws.amazon.com/cli/latest/reference/sts/assume-role.html">https://docs.aws.amazon.com/cli/latest/reference/sts/assume-role.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huihe.github.io/2018/09/18/assume-role/" data-id="ckwxawtdi000fu5lb3irt0a5b" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/aws/" rel="tag">aws</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-sketchapp" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/20/sketchapp/" class="article-date">
+  <time datetime="2018-08-20T03:02:02.000Z" itemprop="datePublished">2018-08-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/20/sketchapp/">Sketchapp</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>UI design tools for designers and developers:</p>
+<p><a target="_blank" rel="noopener" href="https://www.sketchapp.com/">https://www.sketchapp.com/</a><br><a target="_blank" rel="noopener" href="https://app.zeplin.io/">https://app.zeplin.io/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huihe.github.io/2018/08/20/sketchapp/" data-id="ckwxawtdl000lu5lbcvw80fk6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/" rel="tag">tool</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-nodejs810lambda" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/17/nodejs810lambda/" class="article-date">
+  <time datetime="2018-08-17T04:56:41.000Z" itemprop="datePublished">2018-08-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/17/nodejs810lambda/">Use Async or Promise in AWS Lambda Handler</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>In AWS lambda, before node.js runtime 8.10, although you can use promise across all your code, but in top handler, you must follow the below <code>callback</code> pattern. async/await is not supported in handler, even in other functions you must use something like babel to transform your code before deploy.</p>
+<h3 id="Previous-callback-pattern"><a href="#Previous-callback-pattern" class="headerlink" title="Previous callback pattern"></a>Previous callback pattern</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> api = <span class="built_in">require</span>(<span class="string">&#x27;something&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">exports</span>.handler = <span class="function">(<span class="params">event, context, callback</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> getSomthingPromise = api.getSomthing(event);</span><br><span class="line">  getSomthingPromise.then(</span><br><span class="line">    data =&gt; &#123;</span><br><span class="line">      callback(<span class="literal">null</span>, data);</span><br><span class="line">    &#125;,</span><br><span class="line">    err =&gt; &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(err);</span><br><span class="line">      callback(err);</span><br><span class="line">    &#125;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>With the new Node.js 8.10, you can use promise or async/await pattern in handler, just like normal node.js function. And you don’t need to pass context and callback parameters, only event.</p>
+<h2 id="Use-async-await"><a href="#Use-async-await" class="headerlink" title="Use async/await"></a>Use async/await</h2><h4 id="for-sync-value-without-await"><a href="#for-sync-value-without-await" class="headerlink" title="for sync value without await:"></a>for sync value without await:</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exports</span>.handler = <span class="keyword">async</span> (event) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    statusCode: <span class="number">200</span>,</span><br><span class="line">    body: <span class="string">&#x27;ok&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="for-async-value-with-await"><a href="#for-async-value-with-await" class="headerlink" title="for async value with await:"></a>for async value with await:</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> api = <span class="built_in">require</span>(<span class="string">&#x27;something&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">exports</span>.handler = <span class="keyword">async</span> (event) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> data = <span class="keyword">await</span> api.getSomthing(event);</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    statusCode: <span class="number">200</span>,</span><br><span class="line">    body: <span class="built_in">JSON</span>.stringify(&#123; data &#125;)</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Use-Promise"><a href="#Use-Promise" class="headerlink" title="Use Promise"></a>Use Promise</h2><h4 id="for-sync-value-wrap-in-Promise"><a href="#for-sync-value-wrap-in-Promise" class="headerlink" title="for sync value wrap in Promise:"></a>for sync value wrap in Promise:</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exports</span>.handler = <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Promise</span>.resolve(&#123;</span><br><span class="line">    statusCode: <span class="number">200</span>,</span><br><span class="line">    body: <span class="string">&#x27;ok&#x27;</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="for-async"><a href="#for-async" class="headerlink" title="for async:"></a>for async:</h4><p>you can directly return it, but I don’t recommend this way</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> api = <span class="built_in">require</span>(<span class="string">&#x27;something&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">exports</span>.handler = <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> api.getSomthing(event);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>It’s better start from Promise.resolve():</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exports</span>.handler = <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Promise</span>.resolve(event)</span><br><span class="line">    .then(api.getSomthing);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>To use async or Promise, it’s up to your choice. But I’m sure either way is easier than the previous callback pattern. Also to mention again, async/await is actually a syntactic sugar for promise in js.</p>
+<p>Ref:<br><a target="_blank" rel="noopener" href="https://aws.amazon.com/blogs/compute/node-js-8-10-runtime-now-available-in-aws-lambda/">https://aws.amazon.com/blogs/compute/node-js-8-10-runtime-now-available-in-aws-lambda/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huihe.github.io/2018/08/17/nodejs810lambda/" data-id="ckwxawtdp000vu5lb8t5425mr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lambda/" rel="tag">lambda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/" rel="tag">node</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-cloudcraft" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/17/cloudcraft/" class="article-date">
+  <time datetime="2018-08-17T04:45:48.000Z" itemprop="datePublished">2018-08-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/17/cloudcraft/">A Good Online Tool to Draw Your Cloud Architecture</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a target="_blank" rel="noopener" href="https://cloudcraft.co/">https://cloudcraft.co/</a></p>
+<p>You can draw 2D/3D architecture with heaps of aws icons and easily export to draw.io or just image.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huihe.github.io/2018/08/17/cloudcraft/" data-id="ckwxawtdj000gu5lbetsh7x9q" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/" rel="tag">tool</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-composition" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/14/composition/" class="article-date">
+  <time datetime="2018-06-13T20:20:21.000Z" itemprop="datePublished">2018-06-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/14/composition/">FP in Js</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> composeFuncs = <span class="function">(<span class="params">...funcs</span>) =&gt;</span> <span class="function">(<span class="params">x</span>) =&gt;</span> funcs.reduce(<span class="function">(<span class="params">p, c</span>) =&gt;</span> p.then(c), <span class="built_in">Promise</span>.resolve(x));</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huihe.github.io/2018/06/14/composition/" data-id="ckwxawtdk000iu5lb3p8m61mi" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code/" rel="tag">code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ukulee-billie-jean" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/26/ukulee-billie-jean/" class="article-date">
+  <time datetime="2018-05-26T05:13:32.000Z" itemprop="datePublished">2018-05-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/26/ukulee-billie-jean/">Ukulele &#39;Billie Jean&#39; From James Hill</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>This guy is awesome!</em></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2gyxeXW_2T8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huihe.github.io/2018/05/26/ukulee-billie-jean/" data-id="ckwxawtdm000mu5lbg7jja7if" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/music/" rel="tag">music</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-prettify-your-code" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/22/prettify-your-code/" class="article-date">
+  <time datetime="2018-05-22T12:19:33.000Z" itemprop="datePublished">2018-05-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/22/prettify-your-code/">Use Prettier to Format Your Code, Automatically, for All Your Team</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>As a developer, I highly recommend to use <a target="_blank" rel="noopener" href="https://prettier.io/">prettier</a> in your editor. And today I’d like to go a step further, force and automate code formatting for all your team. No need to discuss the code style any more, don’t waste time on the arguments about space or tab, whether or not add a new line. And it’s much neat for code diff and review.</p>
+<p>It’s very easy, only 2 steps.</p>
+<ol>
+<li>Install <em>pretty-quick</em> and <em>husky</em>. pretty-quick runs prettier on your changed files and husky gives the hook for precommit.</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add pretty-quick husky --dev</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>add this script to your package.json:</li>
+</ol>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;scripts&quot;:</span> &#123;</span><br><span class="line">    <span class="attr">&quot;precommit&quot;:</span> <span class="string">&quot;pretty-quick --staged&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Now every time when any team member commit, the changed files will be prettified.</p>
+<p><img src="https://github.com/azz/pretty-quick/raw/master/img/precommit.gif"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huihe.github.io/2018/05/22/prettify-your-code/" data-id="ckwxawtdl000ku5lbclrjd5no" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code/" rel="tag">code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/async/" rel="tag">async</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aws/" rel="tag">aws</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/" rel="tag">code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coroutine/" rel="tag">coroutine</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lambda/" rel="tag">lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/" rel="tag">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mocha/" rel="tag">mocha</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/music/" rel="tag">music</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/" rel="tag">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/" rel="tag">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/other/" rel="tag">other</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tool/" rel="tag">tool</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/async/" style="font-size: 15px;">async</a> <a href="/tags/aws/" style="font-size: 15px;">aws</a> <a href="/tags/blog/" style="font-size: 12.5px;">blog</a> <a href="/tags/code/" style="font-size: 20px;">code</a> <a href="/tags/coroutine/" style="font-size: 10px;">coroutine</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/js/" style="font-size: 15px;">js</a> <a href="/tags/lambda/" style="font-size: 12.5px;">lambda</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/mocha/" style="font-size: 10px;">mocha</a> <a href="/tags/music/" style="font-size: 17.5px;">music</a> <a href="/tags/node/" style="font-size: 15px;">node</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/other/" style="font-size: 10px;">other</a> <a href="/tags/tool/" style="font-size: 12.5px;">tool</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/10/11/dalabengba/">Dalabengba</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/11/memory-leak-in-node-v12/">Memory Leak in Node V12</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/12/lambda-15min/">Lambda-15min</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/18/assume-role/">Aws Sts Assume-Role</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/20/sketchapp/">Sketchapp</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Hui He<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
